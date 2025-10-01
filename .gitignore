@@ -1,0 +1,20 @@
+# Byte-compiled / cache
+__pycache__/
+*.pyc
+*.pyo
+
+# MRI or dataset files (don’t upload raw medical data!)
+*.nii
+*.nii.gz
+*.npz
+
+# Archives
+*.zip
+*.tar.gz
+*.7z
+
+# System files
+.DS_Store
+
+# Streamlit logs
+.streamlit/
