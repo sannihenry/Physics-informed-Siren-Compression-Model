@@ -1,5 +1,7 @@
-torch
 streamlit
+torch
+torchvision
+numpy
 nibabel
 matplotlib
-numpy
+pillow
