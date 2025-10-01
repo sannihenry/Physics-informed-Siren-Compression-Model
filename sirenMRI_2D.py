@@ -1,4 +1,4 @@
-new_code = """import argparse
+import argparse
 import getpass
 import os
 import random
