@@ -1,6 +1,6 @@
 import streamlit as st
 import torch
-from siren_2D import Siren2D
+from siren import Siren
 import numpy as np
 import nibabel as nib
 import matplotlib.pyplot as plt
