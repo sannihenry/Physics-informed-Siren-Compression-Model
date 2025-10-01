@@ -3,7 +3,6 @@ import torch
 from siren import Siren
 import numpy as np
 import nibabel as nib
-import matplotlib.pyplot as plt
 
 # ----------------------------
 # Load model
@@ -11,11 +10,11 @@ import matplotlib.pyplot as plt
 @st.cache_resource
 def load_model():
     # Must match training config in sirenMRI_2D.py
-    model = Siren2D(
-        dim_in=2,          # 2D coords
-        dim_hidden=256,    # hidden size (default in repo)
+    model = Siren(
+        dim_in=2,          # 2D coordinates
+        dim_hidden=256,    # hidden size (as in training)
         dim_out=1,         # grayscale output
-        num_layers=5,      # depth
+        num_layers=5,      # number of layers
         w0=30.,
         w0_initial=30.
     )
@@ -29,7 +28,7 @@ model = load_model()
 # Streamlit UI
 # ----------------------------
 st.title("🧠 SIREN MRI Compression Demo (NIfTI)")
-st.write("Upload a **NIfTI MRI volume (.nii or .nii.gz)** and reconstruct a slice using the trained SIREN2D model.")
+st.write("Upload a **NIfTI MRI volume (.nii or .nii.gz)** and reconstruct a slice using the trained SIREN model.")
 
 uploaded_file = st.file_uploader("Upload NIfTI file", type=["nii", "nii.gz"])
 
