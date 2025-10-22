@@ -1,7 +1,6 @@
-streamlit
 torch
 torchvision
+gradio
+huggingface_hub
 numpy
-nibabel
-matplotlib
 pillow
